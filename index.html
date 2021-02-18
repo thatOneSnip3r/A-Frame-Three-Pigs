@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+
+<!-- Pig: https://www.amazon.com/Schleich-Pig-Figurine-Toy-Figure/dp/B00PESXMLW -->
+<!-- Wolf: https://abcnews.go.com/US/gray-wolf-fate-colorado-decided-voters/story?id=68116923 -->
+<!-- Straw: https://www.pinterest.com/pin/48413764713857522/ -->
+<!-- Sky:https://unsplash.com -->
+<!-- MC Pig Family: https://www.pinterest.com/pin/430938258064519991/ -->
+<!-- Baby Pig: https://minecraft.gamepedia.com/Minecraft_Dungeons:Baby_Pig -->
+<!-- Pig Face: https://www.pinterest.com/pin/468374429968017006/ -->
+<!-- Everything Else: https://www.textures.com -->
+
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="straw" src="assets/straw.jpg">
+            <img id="sticks" src="assets/sticks.png">
+            <img id="bricks" src="assets/bricks.png">
+            <img id="filter" src="assets/filter.png">
+            <img id="pig" src="assets/pig.jpg">
+            <img id="wolf" src="assets/wolf.jpg">
+            <img id="grass" src="assets/grass.png">
+            <img id="sky" src="assets/sky.png">
+            <img id="path" src="assets/path.png">
+            <img id="pgf" src="assets/pigfam.png">
+            <img id="bbyp" src="assets/babypig.png">
+            <img id="pf" src="assets/pigface.jpg">
+        </a-assets>
+
+        <a-sky src="#sky"></a-sky>
+        <a-plane src="#grass" position="0 -.63 0" scale="50 50" side="double" rotation="90 0 0" repeat="10 10">
+        </a-plane>
+
+        <a-box src="#straw" position="-7 0 3" width="8" height="5" scale=".25 .25 .25" rotation="0 60 0" shadow>
+            <a-box src="#straw" rotation="0 90 0" position="-4.5 0 3.5" width="8" height="5"></a-box>
+            <a-box src="#straw" rotation="0 90 0" position="4.5 0 3.5" width="8" height="5"></a-box>
+            <a-box src="#straw" position="-3 0 7" width="3" height="5"></a-box>
+            <a-box src="#straw" position="3 0 7" width="3" height="5"></a-box>
+            <a-triangle src="#straw" position="0 4.5 5.5" rotation="-45 0 0" scale="10 6" side="double"></a-triangle>
+            <a-triangle src="#straw" position="0 4.5 1.5" rotation="45 0 0" scale="10 6" side="double"></a-triangle>
+            <a-triangle src="#straw" position="2.5 4.5 3.5" rotation="-50 90 0" scale="8 6" side="double"></a-triangle>
+            <a-triangle src="#straw" position="-2.5 4.5 3.5" rotation="50 90 0" scale="8 6" side="double"></a-triangle>
+            <a-triangle src="#straw" position="-2.5 4.5 3.5" rotation="50 90 0" scale="8 6" side="double"></a-triangle>
+            <a-plane src="#straw" position="0 -2.5 3.5" rotation="90 0 0" scale="10 8" side="double"></a-plane>
+            <a-plane src="#straw" position="0 2.5 3.5" rotation="90 0 0" scale="10 8" side="double"></a-plane>
+            <a-plane src="#path" position="0.15 -2.5 20" width="25" height="5" side="double" rotation="90 90 0"
+                repeat=".5 .25"></a-plane>
+            <a-plane src="#pf" position="0 0 .52" scale="4 4"></a-plane>
+
+        </a-box>
+
+        <a-box src="#bricks" position="0 0 0" width="8" height="5" scale=".25 .25 .25" repeat=".5 .5" shadow>
+            <a-box src="#bricks" rotation="0 90 0" position="-4.5 0 3.5" width="8" height="5" repeat=".5 .5"></a-box>
+            <a-box src="#bricks" rotation="0 90 0" position="4.5 0 3.5" width="8" height="5" repeat=".5 .5"></a-box>
+            <a-box src="#bricks" position="-3 0 7" width="3.5" height="5" repeat=".25 .25"></a-box>
+            <a-box src="#bricks" position="3 0 7" width="3.5" height="5" repeat=".25 .25"></a-box>
+            <a-triangle src="#bricks" position="0 4.5 5.5" rotation="-45 0 0" scale="10 6" side="double" repeat=".5 .5">
+            </a-triangle>
+            <a-triangle src="#bricks" position="0 4.5 1.5" rotation="45 0 0" scale="10 6" side="double" repeat=".5 .5">
+            </a-triangle>
+            <a-triangle src="#bricks" position="2.5 4.5 3.5" rotation="-50 90 0" scale="8 6" side="double"
+                repeat=".5 .5"></a-triangle>
+            <a-triangle src="#bricks" position="-2.5 4.5 3.5" rotation="50 90 0" scale="8 6" side="double"
+                repeat=".5 .5"></a-triangle>
+            <a-triangle src="#bricks" position="-2.5 4.5 3.5" rotation="50 90 0" scale="8 6" side="double"
+                repeat=".5 .5"></a-triangle>
+            <a-plane src="#bricks" position="0 -2.5 3.5" rotation="90 0 0" scale="10 8" side="double" repeat=".5 .5">
+            </a-plane>
+            <a-plane src="#bricks" position="0 2.5 3.5" rotation="90 0 0" scale="10 8" side="double" repeat=".5 .5">
+            </a-plane>
+            <a-box src="#bricks" position="2.5 6 3" scale="2.5 5 2.5" repeat=".25 .25" open-ended="true"></a-box>
+            <a-box src="#filter" position="2.5 8.5 3" scale="2.5 .5 2.5" repeat=".25 .25"></a-box>
+            <a-plane src="#path" position="0 -2.4 22.5" width="30" height="10" side="double" rotation="90 90 0"
+                repeat=".5 .25"></a-plane>
+            <a-plane src="#bbyp" position="0 0 .52" scale="4 4"></a-plane>
+
+        </a-box>
+
+        <a-box src="#sticks" position="7 0 3" width="8" height="5" scale=".25 .25 .25" rotation="0 -60 0" shadow>
+            <a-box src="#sticks" rotation="0 90 0" position="-4.5 0 3.5" width="8" height="5"></a-box>
+            <a-box src="#sticks" rotation="0 90 0" position="4.5 0 3.5" width="8" height="5"></a-box>
+            <a-box src="#sticks" position="-3 0 7" width="3" height="5"></a-box>
+            <a-box src="#sticks" position="3 0 7" width="3" height="5"></a-box>
+            <a-triangle src="#sticks" position="0 4.5 5.5" rotation="-45 0 0" scale="10 6" side="double"></a-triangle>
+            <a-triangle src="#sticks" position="0 4.5 1.5" rotation="45 0 0" scale="10 6" side="double"></a-triangle>
+            <a-triangle src="#sticks" position="2.5 4.5 3.5" rotation="-50 90 0" scale="8 6" side="double"></a-triangle>
+            <a-triangle src="#sticks" position="-2.5 4.5 3.5" rotation="50 90 0" scale="8 6" side="double"></a-triangle>
+            <a-triangle src="#sticks" position="-2.5 4.5 3.5" rotation="50 90 0" scale="8 6" side="double"></a-triangle>
+            <a-plane src="#sticks" position="0 -2.5 3.5" rotation="90 0 0" scale="10 8" side="double"></a-plane>
+            <a-plane src="#sticks" position="0 2.5 3.5" rotation="90 0 0" scale="10 8" side="double"></a-plane>
+            <a-plane src="#path" position="0 -2.5 20" width="25" height="5" side="double" rotation="90 90 0"
+                repeat=".5 .25"></a-plane>
+            <a-plane src="#pgf" position="0 0 .52" scale="4 4"></a-plane>
+
+        </a-box>
+
+        <a-plane src="#path" position="0 -.59 10" side="double" rotation="90 0 0" scale="5 5"></a-plane>
+
+        <a-plane src="#pig" position="-4 -.3 3" scale="1 .5" rotation="0 30 0"></a-plane>
+        <a-plane src="#pig" position="1 -.3 3" scale="1 .5" rotation="0 -15 0"></a-plane>
+        <a-plane src="#pig" position="6 -.3 6" scale="1 .5" rotation="0 -80 0"></a-plane>
+        <a-plane src="#wolf" position="0 0 10" scale="3 1.5" rotation="0 -70 0" side="double"></a-plane>
+
+        <a-entity>
+            <a-camera position="0 0 20"></a-camera>
+        </a-entity>
+
+    </a-scene>
+</body>
+</html>
